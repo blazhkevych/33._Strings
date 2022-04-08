@@ -1,12 +1,15 @@
 ﻿#include <iostream>
+#include "lib.h"
 using std::cout;
 using std::endl;
 using std::cin;
 
 int main()
 {
-	char answer{ 0 };
-	int choice{ 0 };
+	char answer{ 0 }; // Do you want to continue?
+	int choice{ 0 }; // Выбор задания
+
+	char str1[100], str2[100], ch, * p;
 
 	do
 	{
@@ -92,7 +95,10 @@ int main()
 			g. char* mystrrev (char* str); - функция реверсирует строку и
 			возвращает указатель на новую строку.
 			*/
-
+			RussianMessage("Введите строку символов: ");
+			cin.getline(str1, 100);
+			RussianMessage("Модифицированная строка: ");
+			cout << mystrrev(str1) << endl;
 		}
 		break;
 		}

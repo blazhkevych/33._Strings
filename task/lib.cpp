@@ -1,6 +1,6 @@
 ﻿#include<windows.h>
 #include<iostream>
-using namespace std;
+using std::cout;
 
 // Функция заменяет в строке все пробелы на табуляции
 char* ReplaceByTabSpace(char* str)
@@ -88,4 +88,11 @@ char* mystrchr(char* s1, char s)
 			return s1 + i;
 	}
 	return nullptr;
+}
+
+// Функция реверсирует строку и
+// возвращает указатель на новую строку.
+char* mystrrev(char* str)
+{
+
 }

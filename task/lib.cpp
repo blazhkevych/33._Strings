@@ -94,5 +94,14 @@ char* mystrchr(char* s1, char s)
 // возвращает указатель на новую строку.
 char* mystrrev(char* str)
 {
-
+	int len = mystrlen(str);
+	int j = len-1;
+	for (int i = 0; i < len / 2; i++)
+	{
+		char temp = str[i];
+		str[i] = str[j];
+		str[j] = temp;
+		j--;
+	}
+	return str;
 }

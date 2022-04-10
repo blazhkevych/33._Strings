@@ -9,7 +9,7 @@ int main()
 	char answer{ 0 }; // Do you want to continue?
 	int choice{ 0 }; // Выбор задания
 
-	char str1[100], str2[100], ch, * p;
+	//char str1[100], str2[100], ch, * p;
 
 	do
 	{
@@ -23,6 +23,7 @@ int main()
 			<< "\nTask 7."
 			<< endl;
 		cin >> choice;
+		cin.get();
 
 		switch (choice)
 		{
@@ -34,7 +35,21 @@ int main()
 			указатель на первое вхождение подстроки str2 в строку str1, в
 			противном случае 0.
 			*/
+			/*RussianMessage("Введите 1 строку символов: ");
+			cin.getline(str1, 100);
+			RussianMessage("Введите 2 строку символов: ");
+			cin.getline(str2, 100);
 
+			p = mystrrev(str1);
+
+			if (!p)
+				RussianMessage("Строка не найдена!\n");
+			else
+			{
+				RussianMessage("Первое вхождение строки в строку: ");
+				cout << p << endl;
+			}
+			cin.get();*/
 		}
 		break;
 
@@ -95,7 +110,9 @@ int main()
 			g. char* mystrrev (char* str); - функция реверсирует строку и
 			возвращает указатель на новую строку.
 			*/
-			RussianMessage("Введите строку символов: ");
+			char str1[100], * p;
+
+			RussianMessage("Введите 1 строку символов: ");
 			cin.getline(str1, 100);
 			RussianMessage("Модифицированная строка: ");
 			cout << mystrrev(str1) << endl;

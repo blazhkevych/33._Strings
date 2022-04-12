@@ -9,7 +9,8 @@ int main()
 	char answer{ 0 }; // Do you want to continue?
 	int choice{ 0 }; // Выбор задания
 
-	//char str1[100], str2[100], ch, * p;
+	char str1[100], str2[100], * p;
+	int number{ 0 };
 
 	do
 	{
@@ -35,12 +36,12 @@ int main()
 			указатель на первое вхождение подстроки str2 в строку str1, в
 			противном случае 0.
 			*/
-			/*RussianMessage("Введите 1 строку символов: ");
+			RussianMessage("Введите 1 строку символов: ");
 			cin.getline(str1, 100);
-			RussianMessage("Введите 2 строку символов: ");
+			RussianMessage("Введите искомую строку символов: ");
 			cin.getline(str2, 100);
 
-			p = mystrrev(str1);
+			p = mystrstr(str1, str2);
 
 			if (!p)
 				RussianMessage("Строка не найдена!\n");
@@ -49,7 +50,6 @@ int main()
 				RussianMessage("Первое вхождение строки в строку: ");
 				cout << p << endl;
 			}
-			cin.get();*/
 		}
 		break;
 
@@ -60,7 +60,11 @@ int main()
 			сравнивает две строки, и, если строки равны возвращает 0,
 			если первая строка больше второй, то возвращает 1, иначе -1.
 			*/
-
+			RussianMessage("Введите 1 строку символов: ");
+			cin.getline(str1, 100);
+			RussianMessage("Введите 2 строку символов: ");
+			cin.getline(str2, 100);
+			cout << mystrcmp(str1, str2) << endl;
 		}
 		break;
 
@@ -70,7 +74,11 @@ int main()
 			c. int StringToNumber (char* str); - функция конвертирует строку
 			в число и возвращает это число.
 			*/
-
+			RussianMessage("Введите строку символов: ");
+			cin.getline(str1, 100);
+			number = StringToNumber(str1);
+			RussianMessage("Число: ");
+			cout << number << endl;
 		}
 		break;
 
@@ -80,7 +88,14 @@ int main()
 			d. char* NumberToString (int number); - функция конвертирует
 			число в строку и возвращает указатель на эту строку.
 			*/
+			RussianMessage("Введите число: ");
+			cin >> number;
+			cin.get();
+			p = NumberToString(number);
+			RussianMessage("Строка: ");
+			cout << p << endl;
 
+			delete[]p;
 		}
 		break;
 
@@ -90,7 +105,10 @@ int main()
 			e. char* Uppercase (char* str1); - функция преобразует строку в
 			верхний регистр.
 			*/
-
+			RussianMessage("Введите строку символов: ");
+			cin.getline(str1, 100);
+			RussianMessage("Модифицированная строка: ");
+			cout << Uppercase(str1) << endl;
 		}
 		break;
 
@@ -100,7 +118,10 @@ int main()
 			f. char* Lowercase (char* str1); - функция преобразует строку в
 			нижний регистр.
 			*/
-
+			RussianMessage("Введите строку символов: ");
+			cin.getline(str1, 100);
+			RussianMessage("Модифицированная строка: ");
+			cout << Lowercase(str1) << endl;
 		}
 		break;
 
@@ -110,7 +131,6 @@ int main()
 			g. char* mystrrev (char* str); - функция реверсирует строку и
 			возвращает указатель на новую строку.
 			*/
-			char str1[100], * p;
 
 			RussianMessage("Введите 1 строку символов: ");
 			cin.getline(str1, 100);
